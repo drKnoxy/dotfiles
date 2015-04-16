@@ -1,25 +1,12 @@
-# Paul's dotfiles
-
-* I maintain this repo as *my* dotfiles, but I'm keenly aware people are using it for theirs.
-* You're quite welcome to make suggestions, however I may decline if it's not of personal value to me.
-* If you're starting off consider forking [mathias](https://github.com/mathiasbynens/dotfiles/) or [alrra](https://github.com/alrra/dotfiles/). paulmillr and gf3 also have great setups
+# Adam's dotfiles
 
 ## Setup
 #### installing & using
 
-* fork this to your own acct
-* clone that repo
 * read and run parts of `setup-a-new-machine.sh`
 * read and run `symlink-setup.sh` 
   * git config needs attention, read the notes.
 * use it. yay!
-
-#### maintenance
-
-* commit/push changes you want.
-* you can also hypothetically cherry-pick commits from me and mathias and our fork ecosystem.
-
-
 
 ## my favorite parts.
 
