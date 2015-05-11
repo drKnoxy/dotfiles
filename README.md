@@ -1,7 +1,12 @@
 # Adam's dotfiles
 
-1. `setup-a-new-machine.sh` read and run in parts
-1. `symlink-setup.sh` read and run in parts
+## Settin up a new machine
+1. run any os updates
+1. install xcode via appstore
+1. download the repo as a zip
+1. unzip the file and copy to your home dir `cd ~/Downloads` `unzip dotfiles.zip -d ~/`
+1. read and run in parts `setup-a-new-machine.sh`
+1. read and run in parts `symlink-setup.sh` 
   * git config needs attention, read the notes.
 
 
