@@ -5,50 +5,6 @@
 
 
 ##
-##  migration from old machine
-##
-##    grab the good stuff.
-##
-
-# what is worth reinstalling
-brew list
-brew cask list
-npm list -g --depth=0 
-
-# let's hold on to these
-
-dest="~/migration" # make this and ./~
-
-cp ~/.extra $dest/~
-cp ~/.z $dest/~
-
-cp ~/.ssh $dest/~
-cp ~/.gnupg $dest/~
-
-cp /Volumes/MacintoshHD/Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist $dest  # wifi
-
-cp ~/Library/Preferences/net.limechat.LimeChat.plist $dest
-
-cp ~/Library/Services $dest # automator stuff
-
-cp ~/Documents $dest
-
-cp ~/.bash_history $dest # back it up for fun?
-
-# Timestats chrome extension stats
-# 	gotta export into JSON through their UI. save somewhere hilarious
-
-# Current Chrome tabs via OneTab
-
-# iTerm settings - not sure how to safely migrate yet.
-
-# Finder settings and TotalFinder settings
-#   Not sure how to do this yet. Really want to.
-
-
-
-
-##
 ## new machine setup.
 ##
 
