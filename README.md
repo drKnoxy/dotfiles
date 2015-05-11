@@ -3,6 +3,7 @@
 ## Settin up a new machine
 1. run any os updates
 1. install xcode via appstore
+2. open xcode and agree to the license
 1. download the repo as a zip
 1. unzip the file and copy to your home dir `cd ~/Downloads` `unzip dotfiles.zip -d ~/`
 1. read and run in parts `setup-a-new-machine.sh`
