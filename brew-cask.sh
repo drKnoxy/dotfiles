@@ -14,9 +14,8 @@ brew cask install alfred
 brew cask install divvy
 brew cask install dropbox
 brew cask install gyazo
-#brew cask install onepassword
 brew cask install rescuetime
-# cask install flux
+brew cask install flux
 
 # dev
 brew cask install iterm2
