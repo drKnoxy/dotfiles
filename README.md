@@ -3,19 +3,18 @@
 ## Settin up a new machine
 1. run any os updates
 1. install xcode via appstore
-2. open xcode and agree to the license
+1. open xcode and agree to the license
 1. download the repo as a zip
-1. unzip the file and copy to your home dir
+1. unzip the file
 
-    ```bash
-    cd ~/Downloads
-    unzip dotfiles-master.zip
-    cp -R dotfiles-master/* ~/
-    ```
+```bash
+cd ~/Downloads
+unzip dotfiles-master.zip
+```
 
 1. read and run in parts `setup-a-new-machine.sh`
+1. once you have git, clone the repo into `~/code`
 1. read and run in parts `symlink-setup.sh` 
-  * git config needs attention, read the notes.
 
 
 ## my favorite parts.
