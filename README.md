@@ -1,16 +1,13 @@
 # Adam's dotfiles
 
-## Setup
-#### installing & using
-
-* read and run parts of `setup-a-new-machine.sh`
-* read and run `symlink-setup.sh` 
+1. `setup-a-new-machine.sh` read and run in parts
+1. `symlink-setup.sh` read and run in parts
   * git config needs attention, read the notes.
-* use it. yay!
+
 
 ## my favorite parts.
 
-### [`.aliases`](https://github.com/paulirish/dotfiles/blob/master/.aliases) and [`.functions`](https://github.com/paulirish/dotfiles/blob/master/.functions)
+### [`.aliases`](https://github.com/drKnoxy/dotfiles/blob/master/.aliases) and [`.functions`](https://github.com/drKnoxy/dotfiles/blob/master/.functions)
 
 So many goodies.
 
@@ -88,15 +85,6 @@ PATH=$PATH:~/code/git-friendly
 # ...
 
 export PATH
-```
-
-
-### Sensible OS X defaults
-
-Mathias's repo is the canonical for this, but you should probably run his or mine after reviewing it.
-
-```bash
-./.osx
 ```
 
 ### `~/bin`
