@@ -13,7 +13,7 @@ GRC=`which grc`
 if [ "$TERM" != dumb ] && [ -n "$GRC" ]
     then
         alias colourify="$GRC -es --colour=auto"
-        alias configure='colourify ./configure' 
+        alias configure='colourify ./configure'
         for app in {diff,make,gcc,g++,mtr,ping,traceroute}; do
             alias "$app"='colourify '$app
     done
@@ -29,12 +29,12 @@ export HISTTIMEFORMAT='%F %T '
 # keep history up to date, across sessions, in realtime
 #  http://unix.stackexchange.com/a/48113
 export HISTCONTROL=ignoredups:erasedups         # no duplicate entries
-export HISTSIZE=100000                          # big big history (default is 500)
-export HISTFILESIZE=$HISTSIZE                   # big big history
-which shopt > /dev/null && shopt -s histappend  # append to history, don't overwrite it
+# export HISTSIZE=100000                          # big big history (default is 500)
+# export HISTFILESIZE=$HISTSIZE                   # big big history
+# which shopt > /dev/null && shopt -s histappend  # append to history, don't overwrite it
 
 # Save and reload the history after each command finishes
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+# export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # ^ the only downside with this is [up] on the readline will go over all history not just this bash session.
 
@@ -57,11 +57,15 @@ if [[ -n "$ZSH_VERSION" ]]; then  # quit now if in zsh
 fi;
 
 # bash completion.
-if  which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
-    source "$(brew --prefix)/share/bash-completion/bash_completion";
-elif [ -f /etc/bash_completion ]; then
-    source /etc/bash_completion;
-fi;
+# if  which brew > /dev/null && [ -f "/usr/local/share/bash-completion/bash_completion" ]; then
+#     source "/usr/local/share/bash-completion/bash_completion";
+# elif [ -f /etc/bash_completion ]; then
+#     source /etc/bash_completion;
+# fi;
+
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
 
 # homebrew completion
 if  which brew > /dev/null; then
@@ -83,7 +87,7 @@ complete -W "NSGlobalDomain" defaults
 
 ##
 ## better `cd`'ing
-## 
+##
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
