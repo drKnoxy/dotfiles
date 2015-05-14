@@ -14,10 +14,8 @@
 #
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-#
-# install all the things
+# then install things
 ./brew.sh
-./brew-cask.sh
 
 
 
