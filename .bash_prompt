@@ -1,5 +1,5 @@
 # usernames to hide
-usernames=(adam aknox)
+usernames=(adam aknox zoeknox)
 
 
 if [[ -n "$ZSH_VERSION" ]]; then  # quit now if in zsh
