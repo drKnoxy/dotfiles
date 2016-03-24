@@ -649,3 +649,5 @@ Plug 'xolox/vim-notes'
 
 call plug#end()
 " }}}
+
+autocmd filetype crontab setlocal nobackup nowritebackup
