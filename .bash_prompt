@@ -73,8 +73,10 @@ set_prompts() {
 
         userhost=""
         userhost+="\[${userStyle}\]$USER "
-        userhost+="${white}at "
-        userhost+="${orange}$HOSTNAME "
+        if [[ "${HOSTNAME}" != "AdoLakok.local" ]]; then
+            userhost+="${white}at "
+            userhost+="${orange}$HOSTNAME "
+        fi;
         userhost+="${white}in"
 
         if ! [[ ${usernames[*]} =~ $USER ]]; then echo $userhost ""; fi

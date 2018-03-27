@@ -3,5 +3,9 @@
 --ignore-dir=vendor
 --ignore-dir=public/generated
 --ignore-dir=coverage
+--ignore-dir=build
+--ignore-dir=super_powers
+--ignore-dir=assets/js/docs
 --sort-files
 --type-set=hbs=.hbs
+

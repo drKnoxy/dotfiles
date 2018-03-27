@@ -1,89 +1,37 @@
-# zmodload zsh/zprof
+export ZSH=/Users/awknox/.oh-my-zsh
+ZSH_THEME="pure"
+plugins=(z colored-man-pages gulp)
 
-# history
-SAVEHIST=100000
+source $ZSH/oh-my-zsh.sh
 
-# vim bindings
-bindkey -v
+# Random
+alias server='python -m SimpleHTTPServer & open http://127.0.0.1:8000/'
+alias gzk='gzip -k -- *.js && du -ah -- *.gz'
+alias pretty="prettier --write --print-width=90 --single-quote --trailing-comma=es5"
+alias dnsup="sudo brew services restart dnsmasq && sudo lsof -i -n -P | grep dnsmasq"
+alias dnsdown="sudo brew services stop dnsmasq"
 
+# GIT
+alias ga='git add'
+alias gs='clear; git status'
+alias gd='git diff'
+alias gds='cdiff -s -w0'
+alias gdw='git diff --color-words'
+alias gdc='git diff --cached'
+alias gdcw='git diff --cached --color-words'
 
-# zstyle :compinstall filename '/Users/paulirish/.zshrc'
-# autoload -Uz compinit
-# compinit
+# File listing
+alias ls='gls -AF --color'    # short list of files
+alias l='ls -1'               # list all files in a single column
+alias ll='gls -AlFh --color'  # list all files with extra data
+alias ld='ll | grep '^d' | awk '\''{print $10;}'\''' # list directories
 
+# Ruby ruby ruby
+eval "$(rbenv init -)"
 
-fpath=( "$HOME/.zfunctions" $fpath )
+# tabtab source for yarn package
+# uninstall by removing these lines or running `tabtab uninstall yarn`
+[[ -f /usr/local/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh ]] && . /usr/local/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.zsh
 
-
-
-# antigen time!
-source ~/code/antigen/antigen.zsh
-
-# Load the oh-my-zsh's library.
-antigen use oh-my-zsh
-
-
-local b="antigen-bundle"
-
-# Guess what to install when running an unknown command.
-$b command-not-found
-
-# Helper for extracting different types of archives.
-$b extract
-
-# atom editor
-$b atom
-
-# homebrew  - autocomplete on `brew install`
-$b brew
-$b brew-cask
-
-# Tracks your most used directories, based on 'frecency'. 
-$b z
-
-# suggestion as you type
-$b tarruda/zsh-autosuggestions
-
-# nicoulaj's moar completion files for zsh
-# $b zsh-users/zsh-completions src
-
-# Syntax highlighting on the readline
-$b zsh-users/zsh-syntax-highlighting
-
-# colors for all files!
-$b trapd00r/zsh-syntax-highlighting-filetypes
-
-# dont set a theme, because pure does it all
-$b sindresorhus/pure
-
-# history search
-$b zsh-users/zsh-history-substring-search
-
-
-# Tell antigen that you're done.
-antigen apply
-
-
-# bind UP and DOWN arrow keys for history search
-zmodload zsh/terminfo
-bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down
-
-export PURE_GIT_UNTRACKED_DIRTY=0
-
-# Automatically list directory contents on `cd`.
-auto-ls () { ls; }
-chpwd_functions=( auto-ls $chpwd_functions )
-
-
-# zprof
-
-# history mgmt
-# http://www.refining-linux.org/archives/49/ZSH-Gem-15-Shared-history/
-setopt inc_append_history
-setopt share_history
-
-
-# Load default dotfiles
-source ~/.bash_profile
-
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/Cellar/node/8.1.2/bin:$PATH"

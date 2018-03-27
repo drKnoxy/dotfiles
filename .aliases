@@ -24,13 +24,6 @@ alias gd='git diff'
 alias gdc='git diff --cached'
 alias ga='git add'
 
-# Webpack watch
-alias wpw="webpack --watch"
-
-# setting up the sublime symlink
-ln -sf "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
-
-
 alias hosts='sudo $EDITOR /etc/hosts'
 
 # use coreutils `ls` if possible…
@@ -38,19 +31,3 @@ command -v gls >/dev/null 2>&1 || alias gls="ls"
 
 # `cat` with beautiful colors. requires Pygments installed.
 alias c='pygmentize -O style=monokai -f console256 -g'
-
-# Flush Directory Service cache
-alias flush="dscacheutil -flushcache"
-
-# Trim new lines and copy to clipboard
-alias trimcopy="tr -d '\n' | pbcopy"
-
-# Recursively delete `.DS_Store` files
-alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
-
-# File size
-alias du="du -ah"
-
-# Empty the Trash on all mounted volumes and the main HDD
-alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
-
